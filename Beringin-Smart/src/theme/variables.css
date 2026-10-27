@@ -1,0 +1,79 @@
+/** Ionic CSS Variables **/
+:root {
+  /** Primary - Crimson Ruby **/
+  --ion-color-primary: #dc2626;
+  --ion-color-primary-rgb: 220, 38, 38;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #b91c1c;
+  --ion-color-primary-tint: #ef4444;
+
+  /** Secondary - Deep Burgundy **/
+  --ion-color-secondary: #991b1b;
+  --ion-color-secondary-rgb: 153, 27, 27;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #7f1d1d;
+  --ion-color-secondary-tint: #b91c1c;
+
+  /** Tertiary - Rose Coral **/
+  --ion-color-tertiary: #f43f5e;
+  --ion-color-tertiary-rgb: 244, 63, 94;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #e11d48;
+  --ion-color-tertiary-tint: #fb7185;
+
+  /** Success **/
+  --ion-color-success: #16a34a;
+  --ion-color-success-rgb: 22, 163, 74;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #15803d;
+  --ion-color-success-tint: #22c55e;
+
+  /** Warning **/
+  --ion-color-warning: #f59e0b;
+  --ion-color-warning-rgb: 245, 158, 11;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #d97706;
+  --ion-color-warning-tint: #fbbf24;
+
+  /** Danger **/
+  --ion-color-danger: #e11d48;
+  --ion-color-danger-rgb: 225, 29, 72;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #be123c;
+  --ion-color-danger-tint: #f43f5e;
+
+  /** Dark **/
+  --ion-color-dark: #1c1917;
+  --ion-color-dark-rgb: 28, 25, 23;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #141211;
+  --ion-color-dark-tint: #332e2b;
+
+  /** Medium **/
+  --ion-color-medium: #71717a;
+  --ion-color-medium-rgb: 113, 113, 122;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #52525b;
+  --ion-color-medium-tint: #a1a1aa;
+
+  /** Light Canvas - Soft Ruby Blush **/
+  --ion-color-light: #fff5f5;
+  --ion-color-light-rgb: 255, 245, 245;
+  --ion-color-light-contrast: #450a0a;
+  --ion-color-light-contrast-rgb: 69, 10, 10;
+  --ion-color-light-shade: #fed7d7;
+  --ion-color-light-tint: #ffffff;
+
+  --ion-background-color: #fff5f5;
+  --ion-background-color-rgb: 255, 245, 245;
+  --ion-text-color: #1c1917;
+  --ion-text-color-rgb: 28, 25, 23;
+}

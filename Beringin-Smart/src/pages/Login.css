@@ -1,0 +1,271 @@
+/* Login.css - Light Mode Liquid Glass Edition (Apple / 21st.dev Style) */
+
+.login-page-content {
+  --background: 
+    radial-gradient(ellipse 70% 55% at 15% 15%, rgba(99, 102, 241, 0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 65% 55% at 85% 25%, rgba(56, 189, 248, 0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 85%, rgba(129, 140, 248, 0.12) 0%, transparent 70%),
+    #f1f5f9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Ambient Liquid Pastel Orbs in Background for True Glass Refraction */
+.login-bg-refraction {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.login-liquid-orb-1 {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  top: 6%;
+  left: 15%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(129, 140, 248, 0.12) 50%, transparent 70%);
+  filter: blur(65px);
+  animation: liquidMeshFloat 14s ease-in-out infinite alternate;
+}
+
+.login-liquid-orb-2 {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  bottom: 6%;
+  right: 12%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(147, 197, 253, 0.10) 50%, transparent 70%);
+  filter: blur(65px);
+  animation: liquidMeshFloat 16s ease-in-out infinite alternate -5s;
+}
+
+.login-liquid-orb-3 {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 65%);
+  filter: blur(55px);
+  animation: liquidMeshFloat 18s ease-in-out infinite alternate -9s;
+}
+
+@keyframes liquidMeshFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 20px) scale(1.08); }
+  100% { transform: translate(-20px, 35px) scale(0.95); }
+}
+
+/* Single Unified Liquid Glass Card Container */
+.login-card-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Light Mode Liquid Glass Card */
+.login-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1.5px solid #ffffff;
+  border-radius: 24px;
+  padding: 36px 30px 28px 30px;
+  box-shadow: 
+    0 20px 45px -12px rgba(99, 102, 241, 0.12),
+    0 4px 16px rgba(15, 23, 42, 0.04),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Header inside card */
+.login-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.login-school-logo-frame {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 14px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1.5px solid #ffffff;
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 
+    0 8px 20px -4px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.login-school-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+.login-title {
+  margin: 0 0 4px 0;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+.login-subtitle {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* Light Mode Liquid Glass Form Fields */
+.login-field {
+  margin-bottom: 18px;
+}
+
+.login-field-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+
+.login-field-input {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  padding: 0 14px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    inset 0 1px 2px rgba(15, 23, 42, 0.03),
+    0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+.login-field-input:focus-within {
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 
+    0 0 0 3px rgba(99, 102, 241, 0.12),
+    inset 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.login-field-input ion-icon {
+  font-size: 1.15rem;
+  color: #6366f1;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.login-field-input ion-input {
+  --color: #0f172a;
+  --placeholder-color: #94a3b8;
+  --placeholder-opacity: 0.9;
+  font-size: 0.92rem;
+}
+
+.login-toggle-eye {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.login-toggle-eye:hover {
+  color: #0f172a;
+  background: rgba(15, 23, 42, 0.04);
+}
+
+/* Light Mode Liquid Glass Submit Button */
+.login-submit-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.02) 60%,
+    rgba(255, 255, 255, 0.06) 100%
+  ), #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 
+    0 10px 24px -5px rgba(79, 70, 229, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.04) 60%,
+    rgba(255, 255, 255, 0.08) 100%
+  ), #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 28px -4px rgba(79, 70, 229, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.login-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Minimal Footer inside Card */
+.login-card-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  text-align: center;
+  font-size: 0.74rem;
+  color: #94a3b8;
+  letter-spacing: 0.2px;
+}
