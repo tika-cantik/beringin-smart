@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
             'role' => 'petugas',
         ]);
 
-        // 2. Akun Siswa Utama (Tika Pratama)
-        $tika = User::create([
+        // 2. Akun Siswa Utama
+        $siswa = User::create([
             'name' => 'Tika Pratama (XI PPLG 1)',
             'email' => 'tika@beringin.sch.id',
             'password' => Hash::make('password123'),
@@ -28,42 +28,39 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 3. Akun Siswa Pendukung
-        $dimas = User::create([
+        $teman = User::create([
             'name' => 'Dimas Prasetyo (XI PPLG 2)',
             'email' => 'siswa@beringin.sch.id',
             'password' => Hash::make('password123'),
             'role' => 'siswa',
         ]);
 
-        // 4. Data Awal Laporan Pengaduan Sarpras SMKN 1 Beringin (Edisi Tika Pratama)
+        // 4. Data Awal Laporan Pengaduan Sarpras (Edisi Tika)
         Laporan::create([
-            'user_id' => $tika->id,
-            'judul' => 'Gagang Pintu Toilet Siswa Lantai 2 Patah',
-            'deskripsi' => 'Gagang pintu toilet siswa putra di lantai 2 patah sehingga sering terkunci dari dalam dan membahayakan siswa saat jam istirahat.',
+            'user_id' => $siswa->id,
+            'nama' => 'Gagang Pintu Toilet Siswa Lantai 2 Patah',
             'lokasi' => 'Toilet Siswa Putra Lantai 2 Gedung Utama',
-            'kategori' => 'Fasilitas Umum',
-            'foto' => null,
-            'status' => 'diproses',
+            'kategori' => 'Lingkungan/Taman',
+            'deskripsi' => 'Gagang pintu toilet siswa putra di lantai 2 patah sehingga sering terkunci dari dalam dan membahayakan siswa saat jam istirahat.',
+            'status' => 'Sedang Diproses',
         ]);
 
         Laporan::create([
-            'user_id' => $dimas->id,
-            'judul' => 'Kabel LAN & Switch Hub Lab Jaringan Sering Disconnect',
-            'deskripsi' => 'Switch hub rack 2 di Lab Jaringan sering mati mendadak saat praktikum Cisco, beberapa kabel patch cord RJ-45 juga sudah getas.',
+            'user_id' => $teman->id,
+            'nama' => 'Kabel LAN & Switch Hub Lab Jaringan Sering Disconnect',
             'lokasi' => 'Lab Komputer & Jaringan Gedung C Lt. 2',
-            'kategori' => 'Lab & Bengkel',
-            'foto' => null,
-            'status' => 'selesai',
+            'kategori' => 'Laboratorium',
+            'deskripsi' => 'Switch hub rack 2 di Lab Jaringan sering mati mendadak saat praktikum Cisco, beberapa kabel patch cord RJ-45 juga sudah getas.',
+            'status' => 'Selesai',
         ]);
 
         Laporan::create([
-            'user_id' => $tika->id,
-            'judul' => 'Kipas Angin Dinding Ruang Teori 3 Bergetar Kencang & Bau Gosong',
-            'deskripsi' => 'Kipas angin dinding bagian belakang berbunyi mendengung keras dan mengeluarkan aroma panas/gosong saat dinyalakan.',
+            'user_id' => $siswa->id,
+            'nama' => 'Kipas Angin Dinding Ruang Teori 3 Bergetar Kencang & Bau Gosong',
             'lokasi' => 'Ruang Teori 3 (Kelas XI PPLG 1)',
-            'kategori' => 'Ruang Belajar',
-            'foto' => null,
-            'status' => 'menunggu',
+            'kategori' => 'Fasilitas Kelas',
+            'deskripsi' => 'Kipas angin dinding bagian belakang berbunyi mendengung keras dan mengeluarkan aroma panas/gosong saat dinyalakan.',
+            'status' => 'Menunggu',
         ]);
     }
 }
