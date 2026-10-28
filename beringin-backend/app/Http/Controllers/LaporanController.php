@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
-    /**
-     * Ambil semua data laporan (Publik / Siswa / Petugas)
-     */
     public function index()
     {
         $laporan = Laporan::orderBy('created_at', 'desc')->get();
@@ -19,13 +16,22 @@ class LaporanController extends Controller
         ], 200);
     }
 
-    /**
-     * Khusus Petugas Sarpras: Mengubah status laporan
-     * Dilindungi Authorization Check: 403 Forbidden jika bukan petugas!
-     */
+    public function show($id)
+    {
+        $laporan = Laporan::find($id);
+        if (!$laporan) {
+            return response()->json([
+                'message' => 'Data laporan tidak ditemukan'
+            ], 404);
+        }
+        return response()->json([
+            'message' => 'Berhasil mengambil detail laporan',
+            'data'    => $laporan
+        ], 200);
+    }
+
     public function updateStatus(Request $request, $id)
     {
-        // 1. Verifikasi Role Pengguna
         $user = $request->user();
         if (!$user || $user->role !== 'petugas') {
             return response()->json([
@@ -33,12 +39,10 @@ class LaporanController extends Controller
             ], 403);
         }
 
-        // 2. Validasi Input Status
         $request->validate([
             'status' => 'required|in:Menunggu,Sedang Diproses,Selesai'
         ]);
 
-        // 3. Cari Data Laporan
         $laporan = Laporan::find($id);
         if (!$laporan) {
             return response()->json([
@@ -46,7 +50,6 @@ class LaporanController extends Controller
             ], 404);
         }
 
-        // 4. Update Status
         $laporan->status = $request->input('status');
         $laporan->save();
 
@@ -56,9 +59,6 @@ class LaporanController extends Controller
         ], 200);
     }
 
-    /**
-     * Buat Tiket Laporan Baru (Siswa / Pelapor)
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([

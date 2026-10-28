@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 // Endpoint Publik
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/laporan', [LaporanController::class, 'index']);
+Route::get('/laporan/{id}', [LaporanController::class, 'show']);
 Route::post('/laporan', [LaporanController::class, 'store']);
 
 // Endpoint Terproteksi Token Sanctum

@@ -149,21 +149,16 @@ const Home: React.FC = () => {
         <IonToolbar className="home-header-toolbar">
           {/* Brand & App Info */}
           <div slot="start" className="mobile-header-brand">
-            <div className="mobile-logo-box">
-              <IonIcon icon={shieldCheckmarkOutline} />
+            <div className="school-header-logo-box">
+              <img src="/logo-smkn1beringin.png" alt="Logo SMKN 1 Beringin" />
             </div>
 
             <div className="mobile-brand-text">
               <h1 className="mobile-brand-title">Beringin Smart</h1>
               <div className="mobile-brand-subtitle">
-                <span>SMKN 1</span>
+                <span className="school-tag">SMKN 1 Beringin</span>
                 <span>•</span>
-                <span
-                  style={{
-                    color: userRole === 'petugas' ? '#c084fc' : '#e9d5ff',
-                    fontWeight: 700,
-                  }}
-                >
+                <span className="role-badge">
                   {userRole === 'petugas' ? 'Petugas Sarpras' : 'Siswa'}
                 </span>
               </div>
@@ -173,19 +168,15 @@ const Home: React.FC = () => {
           {/* User Avatar & Logout Button */}
           <IonButtons slot="end" className="mobile-header-end">
             <div className="mobile-avatar-pill">
-              <div
-                className="mobile-avatar-circle"
-                style={{ background: userRole === 'petugas' ? '#b91c1c' : '#dc2626' }}
-              >
-                {currentUser?.name ? currentUser.name.charAt(0).toUpperCase() : 'A'}
+              <div className="mobile-avatar-circle">
+                {currentUser?.name ? currentUser.name.charAt(0).toUpperCase() : 'T'}
               </div>
               <span className="mobile-user-name">
-                {currentUser?.name ? currentUser.name.split(' ')[0] : 'User'}
+                {currentUser?.name ? currentUser.name.split(' ')[0] : 'Tika'}
               </span>
             </div>
 
             <IonButton
-              color="light"
               fill="clear"
               size="small"
               onClick={handleLogout}
