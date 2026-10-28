@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
         // 2. Akun Siswa Utama
         $siswa = User::create([
-            'name' => 'Tika Pratama (XI PPLG 1)',
+            'name' => 'Dia Kartika (XI PPLG 1)',
             'email' => 'tika@beringin.sch.id',
             'password' => Hash::make('password123'),
             'role' => 'siswa',

@@ -1,5 +1,5 @@
 # Beringin Smart — Portal Pengaduan Sarana & Prasarana Sekolah
-> **Edisi Khusus: Tika Pratama (XI PPLG 1)**  
+> **Edisi Khusus: Dia Kartika (XI PPLG 1)**  
 > **SMK Negeri 1 Beringin • Tahun Ajaran 2026/2027**  
 > Standar Kompetensi Kerja Nasional Indonesia (SKKNI) No. 282 Tahun 2016  
 > Tema Identitas Antarmuka: **Crimson Ruby & Deep Burgundy**
@@ -7,7 +7,7 @@
 ---
 
 ## 📌 Deskripsi Proyek
-**Beringin Smart (Tika Pratama Edition)** adalah aplikasi layanan pelaporan kerusakan sarana dan prasarana lingkungan sekolah berbasis Mobile & Web responsif. Aplikasi ini dirancang untuk mempercepat koordinasi antara siswa dengan staf sarana prasarana sekolah agar setiap kendala fasilitas sekolah dapat ditindaklanjuti secara transparan dan akuntabel.
+**Beringin Smart (Dia Kartika Edition)** adalah aplikasi layanan pelaporan kerusakan sarana dan prasarana lingkungan sekolah berbasis Mobile & Web responsif. Aplikasi ini dirancang untuk mempercepat koordinasi antara siswa dengan staf sarana prasarana sekolah agar setiap kendala fasilitas sekolah dapat ditindaklanjuti secara transparan dan akuntabel.
 
 Dibangun dengan arsitektur modern:
 - **Backend**: Laravel 11 RESTful API + Sanctum Token Authentication
@@ -21,7 +21,7 @@ Dibangun dengan arsitektur modern:
 
 | Peran (Role) | Nama Pengguna | Alamat Email | Kata Sandi | Deskripsi Hak Akses |
 |---|---|---|---|---|
-| **Siswa Utama** | Tika Pratama | `tika@beringin.sch.id` | `password123` | Mengajukan laporan, melihat riwayat tiket, memfilter kategori, serta melihat progres status laporan. |
+| **Siswa Utama** | Dia Kartika | `tika@beringin.sch.id` | `password123` | Mengajukan laporan, melihat riwayat tiket, memfilter kategori, serta melihat progres status laporan. |
 | **Petugas Sarpras** | Pak Hendra | `petugas@beringin.sch.id` | `password123` | Melihat seluruh laporan masuk dan mengubah status pengerjaan (*Diproses* / *Selesai*). |
 | **Siswa Pendukung** | Dimas Prasetyo | `siswa@beringin.sch.id` | `password123` | Siswa kelas XI PPLG 2 untuk simulasi multi-pengguna. |
 
@@ -44,7 +44,7 @@ Pengujian validasi sistem saat pengguna memasukkan kredensial yang salah. Sistem
 ---
 
 ### 3. Dashboard Beranda Siswa Utama
-Tampilan beranda siswa setelah berhasil login dengan sambutan personal untuk Tika Pratama serta daftar laporan sarpras terkini.
+Tampilan beranda siswa setelah berhasil login dengan sambutan personal untuk Dia Kartika serta daftar laporan sarpras terkini.
 ![03. Dashboard Beranda Siswa](screenshots/03_dashboard_beranda_siswa.png)
 
 ---

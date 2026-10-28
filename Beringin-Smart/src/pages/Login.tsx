@@ -132,7 +132,7 @@ const Login: React.FC = () => {
               Beringin Smart
             </h1>
             <p style={{ margin: 0, color: '#fecaca', fontSize: '0.92rem', opacity: 0.95 }}>
-              Portal Pengaduan Sarana & Prasarana • Tika Pratama Edition
+              Portal Pengaduan Sarana & Prasarana • Dia Kartika Edition
             </p>
           </div>
 
@@ -323,7 +323,7 @@ const Login: React.FC = () => {
           {/* Footer note */}
           <div style={{ textAlign: 'center', marginTop: '20px' }}>
             <span style={{ fontSize: '0.78rem', color: '#fecaca', opacity: 0.9 }}>
-              © 2026-2027 SMK Negeri 1 Beringin • Tika Pratama (XI PPLG 1) • SKKNI No. 282/2016
+              © 2026-2027 SMK Negeri 1 Beringin • Dia Kartika (XI PPLG 1) • SKKNI No. 282/2016
             </span>
           </div>
         </div>
